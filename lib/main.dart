@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       home:Center(
         child: AnimatedSplashScreen(
-          splash:MyCustomWidget(),
+          splash:Image.asset('assets/images/Group 4.png'),
           nextScreen: SplashScreen(),
         ),
       )
