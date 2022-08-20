@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:slider_button/slider_button.dart';
 
 class SplashScreen extends StatefulWidget {
+  static final String id="";
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -77,11 +77,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontFamily: "Jost",
                   fontWeight: FontWeight.w500,
                 ),
-              ),
-            ),
-            Positioned(
-              child: SliderButton(
-               action: ,
               ),
             ),
           ],
