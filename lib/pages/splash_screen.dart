@@ -80,7 +80,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-            ), //Slider Buttn
+            ),
+            //Slider pages
             Positioned(
               top: 700,
               child: SlideAction(
