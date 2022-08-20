@@ -24,9 +24,16 @@ class MyApp extends StatelessWidget {
           splash:Container(
             height: 410,
             width: 389,
-            child: Image.asset('assets/images/Group 4.png'),
+            child: Column(
+              children: [
+                Image.asset('assets/images/Group 4.png'),
+                Text("M Y  T A X I",style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold,color: Colors.yellow),)
+              ],
+            )
           ),
           nextScreen: SplashScreen(),
+          splashTransition: SplashTransition.decoratedBoxTransition,
+          splashIconSize: 600,
         ),
       )
     );
