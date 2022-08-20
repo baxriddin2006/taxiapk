@@ -90,8 +90,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
                 Navigator.pushReplacement(
                     context, MaterialPageRoute(builder: (context) => const Pages()));
-              },
-
+              },/
                 alignLabel: Alignment.center,
               label: Text(
 
