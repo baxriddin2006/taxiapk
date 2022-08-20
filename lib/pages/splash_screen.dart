@@ -83,6 +83,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Positioned(
             top: 700,
             child: Center(child: SliderButton(
+              //slider
               backgroundColor: Colors.white.withOpacity(0.7),
               width: 392,
               action: () {
