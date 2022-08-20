@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 import 'package:taxiapp/pages/pages.dart';
 
-
 class SplashScreen extends StatefulWidget {
-  static final String id="";
+  static final String id = "";
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -28,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              top: 550,
+              top: 50,
               left: 30,
               child: Text(
                 "Xush Kelibsiz!",
@@ -42,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              top: 600,
+              top: 100,
               left: 30,
               child: Row(
                 children: [
@@ -70,28 +69,32 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             const Positioned(
-              top: 700,
+              top: 200,
               left: 30,
               child: Text(
                 "Asrning eng yaxshi taksi bron qilish ilovasida\nkuningizni ajoyib o'tkazing!",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 18,
+                  fontSize: 20,
                   fontFamily: "Jost",
                   fontWeight: FontWeight.w500,
                 ),
               ),
-            ),//Slider Buttn
+            ), //Slider Buttn
             Positioned(
-
-              child:   SlideAction(
-            onSubmit: (){
-              Navigator.pushReplacementNamed(context, Pages.id);
-
-            },
-
+              top: 700,
+              child: SlideAction(
+                text: "Boshlash",
+                innerColor: Colors.white,
+                outerColor: Colors.white.withOpacity(0.7),
+                sliderButtonIcon: Icon(Icons.local_taxi_sharp),
+                onSubmit: () => Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Pages())),
+                submittedIcon: Icon(
+                  Icons.local_taxi,
+                  color: Colors.white,
+                ),
               ),
-
             ),
           ],
         ),
