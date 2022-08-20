@@ -1,5 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:taxiapp/pages/splash_screen.dart';
 import 'package:taxiapp/pages/start_page.dart';
 
 void main() {
@@ -18,9 +19,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:AnimatedSplashScreen(
-        splash:MyCustomWidget(),
-        nextScreen: StartPage(),
+      home:Center(
+        child: AnimatedSplashScreen(
+          splash:MyCustomWidget(),
+          nextScreen: SplashScreen(),
+        ),
       )
     );
   }
