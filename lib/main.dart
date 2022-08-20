@@ -62,6 +62,7 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
+                //asd
                 CupertinoActivityIndicator(
                   radius: 30,
                   color: Colors.deepOrange,
