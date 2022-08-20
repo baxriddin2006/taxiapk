@@ -10,8 +10,9 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return Scaffold(
-      body: Text("salom"),
+      body: Center(child: Text("salom"),),
 
     );
   }
