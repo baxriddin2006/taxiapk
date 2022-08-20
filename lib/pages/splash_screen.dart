@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:slide_to_act/slide_to_act.dart';
+import 'package:taxiapp/pages/pages.dart';
+
 
 class SplashScreen extends StatefulWidget {
   static final String id="";
@@ -66,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ],
               ),
             ),
-            Positioned(
+            const Positioned(
               top: 700,
               left: 30,
               child: Text(
@@ -78,6 +81,17 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
+            ),
+            Positioned(
+
+              child:   SlideAction(
+            onSubmit: (){
+              Navigator.pushReplacementNamed(context, Pages.id);
+
+            },
+
+              ),
+
             ),
           ],
         ),
