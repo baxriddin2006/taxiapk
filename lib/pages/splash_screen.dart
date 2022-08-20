@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slider_button/slider_button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -68,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Positioned(
               top: 700,
               left: 30,
-              child:  Text(
+              child: Text(
                 "Asrning eng yaxshi taksi bron qilish ilovasida\nkuningizni ajoyib o'tkazing!",
                 style: TextStyle(
                   color: Colors.white,
@@ -76,6 +77,11 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontFamily: "Jost",
                   fontWeight: FontWeight.w500,
                 ),
+              ),
+            ),
+            Positioned(
+              child: SliderButton(
+               action: ,
               ),
             ),
           ],
