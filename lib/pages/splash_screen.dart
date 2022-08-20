@@ -97,6 +97,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 style: TextStyle(
                     color: Color(0xff4a4a4a), fontWeight: FontWeight.w500, fontSize: 22,),
               ),
+                baseColor: Colors.orange,
               icon:Image.asset('assets/images/taxi car.png')
                 
 
