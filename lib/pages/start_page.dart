@@ -24,33 +24,35 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Stack(
-                    children: [
-                      SlideFadeTransition(
-                          curve: Curves.elasticOut,
-                          delayStart: const Duration(milliseconds: 500),
-                          animationDuration:const Duration(milliseconds: 1200),
-                          offset: 2.5,
-                          direction: Direction.horizontal,
-                          child: Image.asset('assets/images/Group 4.png')
-                      ),
-                      SlideFadeTransition(
+                Stack(children: [
+                  Positioned(
+                    left: 30,
+                    child: SlideFadeTransition(
                         curve: Curves.elasticOut,
-                        delayStart: const Duration(milliseconds: 1000),
+                        delayStart: const Duration(milliseconds: 500),
                         animationDuration: const Duration(milliseconds: 1200),
                         offset: 2.5,
-                        direction: Direction.vertical,
-                        child: Image.asset('assets/images/image 1.png'),
-                      ),
-                      const SizedBox(height: 30,),
-                    ]
-                ),
+                        direction: Direction.horizontal,
+                        child: Image.asset('assets/images/Group 4.png')),
+                  ),
+                  SlideFadeTransition(
+                    curve: Curves.elasticOut,
+                    delayStart: const Duration(milliseconds: 1000),
+                    animationDuration: const Duration(milliseconds: 1200),
+                    offset: 2.5,
+                    direction: Direction.vertical,
+                    child: Image.asset('assets/images/image 1.png'),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                ]),
               ],
             ),
-
             CupertinoActivityIndicator(
               radius: 30,
               color: Colors.orange,
+              animating: true,
             )
           ],
         ),
@@ -106,25 +108,26 @@ class _SlideFadeTransitionState extends State<SlideFadeTransition>
     );
 
     if (widget.direction == Direction.vertical) {
-      _animationSlide =Tween<Offset>(begin: Offset(0, widget.offset), end: const Offset(0, 0))
+      _animationSlide = Tween<Offset>(
+              begin: Offset(0, widget.offset), end: const Offset(0, 0))
           .animate(CurvedAnimation(
         curve: widget.curve,
         parent: _animationController,
       ));
     } else {
-      _animationSlide =
-          Tween<Offset>(begin: Offset(widget.offset, 0), end: const Offset(0, 0))
-              .animate(CurvedAnimation(
-            curve: widget.curve,
-            parent: _animationController,
-          ));
+      _animationSlide = Tween<Offset>(
+              begin: Offset(widget.offset, 0), end: const Offset(0, 0))
+          .animate(CurvedAnimation(
+        curve: widget.curve,
+        parent: _animationController,
+      ));
     }
 
     _animationFade =
         Tween<double>(begin: -1.0, end: 1.0).animate(CurvedAnimation(
-          curve: widget.curve,
-          parent: _animationController,
-        ));
+      curve: widget.curve,
+      parent: _animationController,
+    ));
 
     Timer(widget.delayStart, () {
       _animationController.forward();
@@ -146,6 +149,5 @@ class _SlideFadeTransitionState extends State<SlideFadeTransition>
         child: widget.child,
       ),
     );
-
   }
 }
