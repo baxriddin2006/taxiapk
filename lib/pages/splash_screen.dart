@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:slide_to_act/slide_to_act.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:taxiapp/pages/pages.dart';
 
@@ -93,6 +92,7 @@ class _SplashScreenState extends State<SplashScreen> {
               },
                 alignLabel: Alignment.center,
               label: Text(
+
                 "Boshlash",
                 style: TextStyle(
                     color: Color(0xff4a4a4a), fontWeight: FontWeight.w500, fontSize: 22,),
